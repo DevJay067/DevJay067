@@ -2,7 +2,7 @@
 
   <!-- Terminal Animation Showcase -->
 
-  ![Terminal Animation](./hello_terminal.svg)
+  ![Terminal Animation](./hello_terminal.svg?v=2)
 
   <br /><br />
 
