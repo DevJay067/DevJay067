@@ -147,7 +147,9 @@
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="0;0.1700;0.1900;0.8500;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="163" y="160" class="terminal-text" clip-path="url(#clip-hello-1)">██  ██  ██████  ██      ██      ██████</text>
+      <g clip-path="url(#clip-hello-1)">
+        <rect x="163.00" y="148" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="191.80" y="148" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="220.60" y="148" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="278.20" y="148" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="335.80" y="148" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="393.40" y="148" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" />
+      </g>
       
       <!-- Slide cursor for Line 1 -->
       <rect class="cursor" x="163" y="148" width="8" height="15">
@@ -162,7 +164,9 @@
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="0;0.1900;0.2100;0.8500;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="163" y="180" class="terminal-text" clip-path="url(#clip-hello-2)">██  ██  ██      ██      ██      ██  ██</text>
+      <g clip-path="url(#clip-hello-2)">
+        <rect x="163.00" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="191.80" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="220.60" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="278.20" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="335.80" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="393.40" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="422.20" y="168" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" />
+      </g>
       
       <!-- Slide cursor for Line 2 -->
       <rect class="cursor" x="163" y="168" width="8" height="15">
@@ -177,7 +181,9 @@
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="0;0.2100;0.2300;0.8500;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="163" y="200" class="terminal-text" clip-path="url(#clip-hello-3)">██████  ████    ██      ██      ██  ██</text>
+      <g clip-path="url(#clip-hello-3)">
+        <rect x="163.00" y="188" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="220.60" y="188" width="28.80" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="278.20" y="188" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="335.80" y="188" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="393.40" y="188" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="422.20" y="188" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" />
+      </g>
       
       <!-- Slide cursor for Line 3 -->
       <rect class="cursor" x="163" y="188" width="8" height="15">
@@ -192,7 +198,9 @@
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="0;0.2300;0.2500;0.8500;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="163" y="220" class="terminal-text" clip-path="url(#clip-hello-4)">██  ██  ██      ██      ██      ██  ██</text>
+      <g clip-path="url(#clip-hello-4)">
+        <rect x="163.00" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="191.80" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="220.60" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="278.20" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="335.80" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="393.40" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="422.20" y="208" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" />
+      </g>
       
       <!-- Slide cursor for Line 4 -->
       <rect class="cursor" x="163" y="208" width="8" height="15">
@@ -207,7 +215,9 @@
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="0;0.2500;0.2700;0.8500;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="163" y="240" class="terminal-text" clip-path="url(#clip-hello-5)">██  ██  ██████  ██████  ██████  ██████</text>
+      <g clip-path="url(#clip-hello-5)">
+        <rect x="163.00" y="228" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="191.80" y="228" width="14.40" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="220.60" y="228" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="278.20" y="228" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="335.80" y="228" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" /><rect x="393.40" y="228" width="43.20" height="15" fill="url(#text-grad)" filter="url(#glow)" />
+      </g>
       
       <!-- Slide cursor for Line 5 -->
       <rect class="cursor" x="163" y="228" width="8" height="15">

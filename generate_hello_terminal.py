@@ -159,7 +159,22 @@ def generate_svg():
     <!-- Big HELLO Block Text Section (Centered at x=163, width=273.6) -->
 """
 
-    # Add the 5 lines of HELLO ASCII art
+    # Add the 5 lines of HELLO ASCII art as solid vector rectangles
+    def get_segments(line_str):
+        segments = []
+        in_block = False
+        start = 0
+        for char_idx, char in enumerate(line_str):
+            if char == '█' and not in_block:
+                in_block = True
+                start = char_idx
+            elif char != '█' and in_block:
+                in_block = False
+                segments.append((start, char_idx - start))
+        if in_block:
+            segments.append((start, len(line_str) - start))
+        return segments
+
     y_start = 160
     y_gap = 20
     for idx, line in enumerate(hello_lines):
@@ -176,6 +191,12 @@ def generate_svg():
         kt_cursor = f"0;{t_start:.4f};{t_end:.4f};1"
         kt_opacity = f"0;{t_start:.4f};{t_start+0.0001:.4f};{t_end-0.0001:.4f};{t_end:.4f};1"
         
+        rects_html = ""
+        for start, length in get_segments(line):
+            x_coord = 163 + start * 7.2
+            width = length * 7.2
+            rects_html += f'<rect x="{x_coord:.2f}" y="{y_pos - 12}" width="{width:.2f}" height="15" fill="url(#text-grad)" filter="url(#glow)" />'
+        
         svg_content += f"""
     <!-- HELLO Line {line_num} -->
     <g>
@@ -184,7 +205,9 @@ def generate_svg():
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="{kt_width}" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="163" y="{y_pos}" class="terminal-text" clip-path="url(#clip-hello-{line_num})">{line}</text>
+      <g clip-path="url(#clip-hello-{line_num})">
+        {rects_html}
+      </g>
       
       <!-- Slide cursor for Line {line_num} -->
       <rect class="cursor" x="163" y="{y_pos - 12}" width="8" height="15">
