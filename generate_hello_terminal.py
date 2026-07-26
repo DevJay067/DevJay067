@@ -7,17 +7,16 @@ a big glowing block-text "HELLO" response.
 import os
 
 def generate_svg():
-    # Hello ASCII Art (41 characters wide per line)
+    # Hello ASCII Art (38 characters wide per line) using ONLY solid blocks
     hello_lines = [
-        "██╗  ██╗███████╗██╗     ██╗      ██████╗ ",
-        "██║  ██║██╔════╝██║     ██║     ██╔═══██╗",
-        "███████║█████╗  ██║     ██║     ██║   ██║",
-        "██╔══██║██╔══╝  ██║     ██║     ██║   ██║",
-        "██║  ██║███████╗███████╗███████╗╚██████╔╝",
-        "╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ "
+        "██  ██  ██████  ██      ██      ██████",
+        "██  ██  ██      ██      ██      ██  ██",
+        "██████  ████    ██      ██      ██  ██",
+        "██  ██  ██      ██      ██      ██  ██",
+        "██  ██  ██████  ██████  ██████  ██████"
     ]
 
-    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340">
+    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
@@ -100,7 +99,7 @@ def generate_svg():
     <!-- Whole terminal fades out at 8.5s and fades in at 9.0s to restart loop -->
     <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.85;0.90;0.98;1" dur="10.0s" repeatCount="indefinite" />
     
-    <rect class="window-bg" width="600" height="340" filter="drop-shadow(0px 10px 30px rgba(0,0,0,0.5))" />
+    <rect class="window-bg" width="600" height="320" filter="drop-shadow(0px 10px 30px rgba(0,0,0,0.5))" />
     
     <!-- Header Bar -->
     <path class="header-bg" d="M 1.5,10 A 8.5,8.5 0 0 1 10,1.5 L 590,1.5 A 8.5,8.5 0 0 1 598.5,10 L 598.5,40 L 1.5,40 Z" />
@@ -157,10 +156,10 @@ def generate_svg():
       <text x="25" y="120" class="status-text" clip-path="url(#clip-status-3)">[+] Loading kernel interface... <tspan class="status-ready">[READY]</tspan></text>
     </g>
 
-    <!-- Big HELLO Block Text Section (Centered at x=152, width=295.2) -->
+    <!-- Big HELLO Block Text Section (Centered at x=163, width=273.6) -->
 """
 
-    # Add the 6 lines of HELLO ASCII art
+    # Add the 5 lines of HELLO ASCII art
     y_start = 160
     y_gap = 20
     for idx, line in enumerate(hello_lines):
@@ -181,31 +180,31 @@ def generate_svg():
     <!-- HELLO Line {line_num} -->
     <g>
       <clipPath id="clip-hello-{line_num}">
-        <rect x="152" y="{y_pos - 12}" width="0" height="20">
-          <animate attributeName="width" values="0;0;296;296;0" keyTimes="{kt_width}" dur="10.0s" repeatCount="indefinite" />
+        <rect x="163" y="{y_pos - 12}" width="0" height="20">
+          <animate attributeName="width" values="0;0;274;274;0" keyTimes="{kt_width}" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="152" y="{y_pos}" class="terminal-text" clip-path="url(#clip-hello-{line_num})">{line}</text>
+      <text x="163" y="{y_pos}" class="terminal-text" clip-path="url(#clip-hello-{line_num})">{line}</text>
       
       <!-- Slide cursor for Line {line_num} -->
-      <rect class="cursor" x="152" y="{y_pos - 12}" width="8" height="15">
-        <animate attributeName="x" values="152;152;448;448" keyTimes="{kt_cursor}" dur="10.0s" repeatCount="indefinite" />
+      <rect class="cursor" x="163" y="{y_pos - 12}" width="8" height="15">
+        <animate attributeName="x" values="163;163;437;437" keyTimes="{kt_cursor}" dur="10.0s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{kt_opacity}" dur="10.0s" repeatCount="indefinite" />
       </rect>
     </g>"""
 
-    # Add final command prompt and blinking cursor at the bottom (Y = 300)
+    # Add final command prompt and blinking cursor at the bottom (Y = 280)
     svg_content += """
 
     <!-- Bottom Command Prompt -->
     <g>
-      <text x="25" y="300">
+      <text x="25" y="280">
         <animate attributeName="visibility" values="hidden;hidden;visible;visible;hidden" keyTimes="0;0.30;0.30;0.85;1" dur="10.0s" repeatCount="indefinite" />
         <tspan class="prompt-user">jay@magar</tspan><tspan class="prompt-symbol">:~$ </tspan>
       </text>
       
       <!-- Blinking Cursor -->
-      <rect class="cursor" x="125" y="288" width="8" height="15">
+      <rect class="cursor" x="125" y="268" width="8" height="15">
         <!-- Start blinking after prompt appears at 3.0s, hide at 8.5s -->
         <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;0;0" 
                  keyTimes="0.000;0.299;0.300;0.325;0.350;0.375;0.400;0.425;0.450;0.475;0.500;0.525;0.550;0.575;0.600;0.625;0.650;0.675;0.700;0.725;0.750;0.775;0.800;0.825;0.850;1.000" 
