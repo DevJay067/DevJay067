@@ -16,70 +16,68 @@ def generate_svg():
         "██  ██  ██████  ██████  ██████  ██████"
     ]
 
-    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+    # Terminal size: 590x310 (leaves 15px margin in 620x340 viewport for drop shadow)
+    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340" width="620" height="340">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
-      .terminal-window {{
+      .terminal-window {
         font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
         font-size: 12px;
         fill: #c9d1d9;
-      }}
-      .window-bg {{
+      }
+      .window-bg {
         fill: #0d1117;
         stroke: #30363d;
         stroke-width: 1.5;
         rx: 10px;
         ry: 10px;
-      }}
-      .header-bg {{
+      }
+      .header-bg {
         fill: #161b22;
         stroke: #30363d;
         stroke-width: 1.5;
-      }}
-      .dot {{
+        rx: 10px;
+        ry: 10px;
+      }
+      .dot {
         stroke-width: 0;
-      }}
-      .terminal-title {{
+      }
+      .terminal-title {
         fill: #8b949e;
         font-size: 11px;
         font-weight: 700;
         text-anchor: middle;
-      }}
-      .prompt-user {{
+      }
+      .prompt-user {
         fill: #58a6ff;
         font-weight: bold;
-      }}
-      .prompt-symbol {{
+      }
+      .prompt-symbol {
         fill: #c9d1d9;
-      }}
-      .prompt-cmd {{
+      }
+      .prompt-cmd {
         fill: #f0883e;
         font-weight: bold;
-      }}
-      .status-text {{
+      }
+      .status-text {
         fill: #8b949e;
-      }}
-      .status-ok {{
+      }
+      .status-ok {
         fill: #58a6ff;
         font-weight: bold;
-      }}
-      .status-ready {{
+      }
+      .status-ready {
         fill: #00ff87;
         font-weight: bold;
         filter: url(#glow);
-      }}
-      .terminal-text {{
-        fill: url(#text-grad);
-        font-weight: bold;
-        filter: url(#glow);
-      }}
-      .cursor {{
+      }
+      .cursor {
         fill: #00ff87;
-      }}
+      }
     </style>
     
-    <!-- Glow filter for hacker aesthetic -->
+    <!-- Glow filter for hacker aesthetic (used for fallback renderers) -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="1.5" result="blur" />
       <feMerge>
@@ -99,29 +97,37 @@ def generate_svg():
     <!-- Whole terminal fades out at 8.5s and fades in at 9.0s to restart loop -->
     <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.85;0.90;0.98;1" dur="10.0s" repeatCount="indefinite" />
     
-    <rect class="window-bg" width="600" height="320" filter="drop-shadow(0px 10px 30px rgba(0,0,0,0.5))" />
+    <!-- Vector Drop Shadow (Soft dark rect offset by +6px to avoid sanitizer stripping) -->
+    <rect x="21" y="21" width="590" height="310" fill="#010409" opacity="0.6" rx="10" ry="10" />
     
-    <!-- Header Bar -->
-    <path class="header-bg" d="M 1.5,10 A 8.5,8.5 0 0 1 10,1.5 L 590,1.5 A 8.5,8.5 0 0 1 598.5,10 L 598.5,40 L 1.5,40 Z" />
-    <circle class="dot" cx="20" cy="20" r="6" fill="#ff5f56" />
-    <circle class="dot" cx="40" cy="20" r="6" fill="#ffbd2e" />
-    <circle class="dot" cx="60" cy="20" r="6" fill="#27c93f" />
-    <text class="terminal-title" x="300.0" y="24">jay-magar ~ hello_secure</text>
+    <!-- Window Body -->
+    <rect class="window-bg" x="15" y="15" width="590" height="310" />
+    
+    <!-- Header Bar (Top Rounded) -->
+    <rect class="header-bg" x="15" y="15" width="590" height="35" />
+    <!-- Cover bottom corners of header to make them flat -->
+    <rect x="15.75" y="35" width="588.5" height="15" fill="#161b22" />
+    
+    <!-- Window Controls -->
+    <circle class="dot" cx="35" cy="32" r="6" fill="#ff5f56" />
+    <circle class="dot" cx="55" cy="32" r="6" fill="#ffbd2e" />
+    <circle class="dot" cx="75" cy="32" r="6" fill="#27c93f" />
+    <text class="terminal-title" x="310.0" y="36">jay-magar ~ hello_secure</text>
     
     <!-- Line 1: Command Typing -->
     <g>
-      <text x="25" y="60"><tspan class="prompt-user">jay@magar</tspan><tspan class="prompt-symbol">:~$ </tspan></text>
+      <text x="40" y="75"><tspan class="prompt-user">jay@magar</tspan><tspan class="prompt-symbol">:~$ </tspan></text>
       <!-- Typing animation for command -->
       <clipPath id="clip-cmd">
-        <rect x="125" y="48" width="0" height="20">
+        <rect x="140" y="63" width="0" height="20">
           <animate attributeName="width" values="0;0;101;101;0" keyTimes="0;0.02;0.08;0.85;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="125" y="60" class="prompt-cmd" clip-path="url(#clip-cmd)">./say_hello.sh</text>
+      <text x="140" y="75" class="prompt-cmd" clip-path="url(#clip-cmd)">./say_hello.sh</text>
       
       <!-- Command Typing Cursor -->
-      <rect class="cursor" x="125" y="48" width="8" height="15">
-        <animate attributeName="x" values="125;125;226;226;125;125" keyTimes="0;0.02;0.08;0.085;0.85;1" dur="10.0s" repeatCount="indefinite" />
+      <rect class="cursor" x="140" y="63" width="8" height="15">
+        <animate attributeName="x" values="140;140;241;241;140;140" keyTimes="0;0.02;0.08;0.085;0.85;1" dur="10.0s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="1;0;1;0;1;1;0;0" keyTimes="0;0.005;0.01;0.015;0.02;0.085;0.086;1" dur="10.0s" repeatCount="indefinite" />
       </rect>
     </g>
@@ -129,34 +135,34 @@ def generate_svg():
     <!-- Line 2: Decrypting status -->
     <g>
       <clipPath id="clip-status-1">
-        <rect x="25" y="68" width="0" height="20">
+        <rect x="40" y="83" width="0" height="20">
           <animate attributeName="width" values="0;0;260;260;0" keyTimes="0;0.09;0.11;0.85;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="25" y="80" class="status-text" clip-path="url(#clip-status-1)">[+] Decrypting cyber uplink... <tspan class="status-ok">[OK]</tspan></text>
+      <text x="40" y="95" class="status-text" clip-path="url(#clip-status-1)">[+] Decrypting cyber uplink... <tspan class="status-ok">[OK]</tspan></text>
     </g>
 
     <!-- Line 3: Establishing status -->
     <g>
       <clipPath id="clip-status-2">
-        <rect x="25" y="88" width="0" height="20">
+        <rect x="40" y="103" width="0" height="20">
           <animate attributeName="width" values="0;0;300;300;0" keyTimes="0;0.11;0.13;0.85;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="25" y="100" class="status-text" clip-path="url(#clip-status-2)">[+] Establishing secure handshake... <tspan class="status-ok">[OK]</tspan></text>
+      <text x="40" y="115" class="status-text" clip-path="url(#clip-status-2)">[+] Establishing secure handshake... <tspan class="status-ok">[OK]</tspan></text>
     </g>
 
     <!-- Line 4: Kernel interface status -->
     <g>
       <clipPath id="clip-status-3">
-        <rect x="25" y="108" width="0" height="20">
+        <rect x="40" y="123" width="0" height="20">
           <animate attributeName="width" values="0;0;290;290;0" keyTimes="0;0.13;0.15;0.85;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <text x="25" y="120" class="status-text" clip-path="url(#clip-status-3)">[+] Loading kernel interface... <tspan class="status-ready">[READY]</tspan></text>
+      <text x="40" y="135" class="status-text" clip-path="url(#clip-status-3)">[+] Loading kernel interface... <tspan class="status-ready">[READY]</tspan></text>
     </g>
 
-    <!-- Big HELLO Block Text Section (Centered at x=163, width=273.6) -->
+    <!-- Big HELLO Block Text Section (Centered at x=173, width=273.6) -->
 """
 
     # Add the 5 lines of HELLO ASCII art as solid vector rectangles
@@ -175,7 +181,7 @@ def generate_svg():
             segments.append((start, len(line_str) - start))
         return segments
 
-    y_start = 160
+    y_start = 175
     y_gap = 20
     for idx, line in enumerate(hello_lines):
         line_num = idx + 1
@@ -186,14 +192,13 @@ def generate_svg():
         t_end = t_start + 0.02
         
         # Format times for SMIL keyTimes
-        # 0.85 is the start of freeze-frame fadeout, 1.0 is the end of the loop
         kt_width = f"0;{t_start:.4f};{t_end:.4f};0.8500;1"
         kt_cursor = f"0;{t_start:.4f};{t_end:.4f};1"
         kt_opacity = f"0;{t_start:.4f};{t_start+0.0001:.4f};{t_end-0.0001:.4f};{t_end:.4f};1"
         
         rects_html = ""
         for start, length in get_segments(line):
-            x_coord = 163 + start * 7.2
+            x_coord = 173 + start * 7.2
             width = length * 7.2
             rects_html += f'<rect x="{x_coord:.2f}" y="{y_pos - 12}" width="{width:.2f}" height="15" fill="url(#text-grad)" filter="url(#glow)" />'
         
@@ -201,7 +206,7 @@ def generate_svg():
     <!-- HELLO Line {line_num} -->
     <g>
       <clipPath id="clip-hello-{line_num}">
-        <rect x="163" y="{y_pos - 12}" width="0" height="20">
+        <rect x="173" y="{y_pos - 12}" width="0" height="20">
           <animate attributeName="width" values="0;0;274;274;0" keyTimes="{kt_width}" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
@@ -210,25 +215,24 @@ def generate_svg():
       </g>
       
       <!-- Slide cursor for Line {line_num} -->
-      <rect class="cursor" x="163" y="{y_pos - 12}" width="8" height="15">
-        <animate attributeName="x" values="163;163;437;437" keyTimes="{kt_cursor}" dur="10.0s" repeatCount="indefinite" />
+      <rect class="cursor" x="173" y="{y_pos - 12}" width="8" height="15">
+        <animate attributeName="x" values="173;173;447;447" keyTimes="{kt_cursor}" dur="10.0s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{kt_opacity}" dur="10.0s" repeatCount="indefinite" />
       </rect>
     </g>"""
 
-    # Add final command prompt and blinking cursor at the bottom (Y = 280)
+    # Add final command prompt and blinking cursor at the bottom (Y = 295)
     svg_content += """
 
     <!-- Bottom Command Prompt -->
     <g>
-      <text x="25" y="280">
+      <text x="40" y="295">
         <animate attributeName="visibility" values="hidden;hidden;visible;visible;hidden" keyTimes="0;0.30;0.30;0.85;1" dur="10.0s" repeatCount="indefinite" />
         <tspan class="prompt-user">jay@magar</tspan><tspan class="prompt-symbol">:~$ </tspan>
       </text>
       
       <!-- Blinking Cursor -->
-      <rect class="cursor" x="125" y="268" width="8" height="15">
-        <!-- Start blinking after prompt appears at 3.0s, hide at 8.5s -->
+      <rect class="cursor" x="140" y="283" width="8" height="15">
         <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;0;0" 
                  keyTimes="0.000;0.299;0.300;0.325;0.350;0.375;0.400;0.425;0.450;0.475;0.500;0.525;0.550;0.575;0.600;0.625;0.650;0.675;0.700;0.725;0.750;0.775;0.800;0.825;0.850;1.000" 
                  dur="10.0s" repeatCount="indefinite" />
