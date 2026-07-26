@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
+      .terminal-window {
+        font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #c9d1d9;
+      }
+      .window-bg {
+        fill: #0d1117;
+        stroke: #DAA520;
+        stroke-width: 1.5;
+        rx: 10px;
+        ry: 10px;
+      }
+      .header-bg {
+        fill: #161b22;
+        stroke: #DAA520;
+        stroke-width: 1.5;
+      }
+      .dot {
+        stroke-width: 0;
+      }
+      .terminal-title {
+        fill: #8b949e;
+        font-size: 11px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .prompt-user {
+        fill: #58a6ff;
+        font-weight: bold;
+      }
+      .prompt-symbol {
+        fill: #c9d1d9;
+      }
+      .prompt-cmd {
+        fill: #f0883e;
+        font-weight: bold;
+      }
+      .terminal-text {
+        fill: url(#text-grad);
+        font-weight: bold;
+      }
+      .cursor {
+        fill: #00ff87;
+      }
+    </style>
+    
+    <!-- Gradient for terminal text (Green to Cyan) -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FF87" />
+      <stop offset="100%" stop-color="#60EFFF" />
+    </linearGradient>
+  </defs>
+  <g class="terminal-window">
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.85;0.90;0.99;1" dur="10.0s" repeatCount="indefinite" />
+    <rect class="window-bg" width="600" height="460" filter="drop-shadow(0px 10px 30px rgba(0,0,0,0.5))" />
+    <!-- Header Bar -->
+    <path class="header-bg" d="M 1.5,10 A 8.5,8.5 0 0 1 10,1.5 L 590,1.5 A 8.5,8.5 0 0 1 598.5,10 L 598.5,40 L 1.5,40 Z" />
+    <circle class="dot" cx="20" cy="20" r="6" fill="#ff5f56" />
+    <circle class="dot" cx="40" cy="20" r="6" fill="#ffbd2e" />
+    <circle class="dot" cx="60" cy="20" r="6" fill="#27c93f" />
+    <text class="terminal-title" x="300.0" y="24">jay-magar ~ terminal</text>
+    <!-- Top Command Line -->
+    <g>
+      <text x="25" y="60"><tspan class="prompt-user">jay@magar</tspan><tspan class="prompt-symbol">:~$ </tspan></text>
+      <clipPath id="clip-cmd">
+        <rect x="125" y="48" width="0" height="20">
+          <animate attributeName="width" values="0;0;136.8;136.8;0" keyTimes="0;0.0200;0.1000;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+        </rect>
+      </clipPath>
+      <text x="125" y="60" class="prompt-cmd" clip-path="url(#clip-cmd)">./draw_crocodile.sh</text>
+      <!-- Command Typing Cursor -->
+      <rect class="cursor" x="125" y="48" width="8" height="15">
+        <animate attributeName="x" values="125;125;261.8;261.8;125;125" keyTimes="0;0.0200;0.1000;0.1300;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;0;1;0;1;1;1;0;1;0;0;0" keyTimes="0;0.0050;0.0100;0.0150;0.0200;0.1000;0.1050;0.1100;0.1150;0.1290;0.1300;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </g>
+    <!-- Crocodile ASCII Drawing -->
+    <clipPath id="clip-line-1">
+      <rect x="25" y="88" width="0" height="20">
+        <animate attributeName="width" values="0;0;326.8;326.8;0" keyTimes="0;0.1380;0.1460;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="100" class="terminal-text" clip-path="url(#clip-line-1)">                                          cl                               </text>
+    <rect class="cursor" x="327.4" y="88" width="8" height="15">
+      <animate attributeName="x" values="327.4;327.4;341.8;341.8" keyTimes="0;0.1380;0.1460;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1380;0.1385;0.1455;0.1460;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-2">
+      <rect x="25" y="103" width="0" height="20">
+        <animate attributeName="width" values="0;0;319.6;319.6;0" keyTimes="0;0.1460;0.1540;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="115" class="terminal-text" clip-path="url(#clip-line-2)">                                      assHe                                </text>
+    <rect class="cursor" x="298.6" y="103" width="8" height="15">
+      <animate attributeName="x" values="298.6;298.6;334.6;334.6" keyTimes="0;0.1460;0.1540;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1460;0.1465;0.1535;0.1540;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-3">
+      <rect x="25" y="118" width="0" height="20">
+        <animate attributeName="width" values="0;0;312.4;312.4;0" keyTimes="0;0.1540;0.1620;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="130" class="terminal-text" clip-path="url(#clip-line-3)">                      a  lt hChainAI{publi                                 </text>
+    <rect class="cursor" x="183.4" y="118" width="8" height="15">
+      <animate attributeName="x" values="183.4;183.4;327.4;327.4" keyTimes="0;0.1540;0.1620;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1540;0.1545;0.1615;0.1620;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-4">
+      <rect x="25" y="133" width="0" height="20">
+        <animate attributeName="width" values="0;0;290.8;290.8;0" keyTimes="0;0.1620;0.1700;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="145" class="terminal-text" clip-path="url(#clip-line-4)">              c:voidmine(){blockchain.i                                    </text>
+    <rect class="cursor" x="125.8" y="133" width="8" height="15">
+      <animate attributeName="x" values="125.8;125.8;305.8;305.8" keyTimes="0;0.1620;0.1700;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1620;0.1625;0.1695;0.1700;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-5">
+      <rect x="25" y="148" width="0" height="20">
+        <animate attributeName="width" values="0;0;262.0;262.0;0" keyTimes="0;0.1700;0.1780;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="160" class="terminal-text" clip-path="url(#clip-line-5)">         n it();}PatientgetPatient(                                        </text>
+    <rect class="cursor" x="89.8" y="148" width="8" height="15">
+      <animate attributeName="x" values="89.8;89.8;277.0;277.0" keyTimes="0;0.1700;0.1780;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1700;0.1705;0.1775;0.1780;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-6">
+      <rect x="25" y="163" width="0" height="20">
+        <animate attributeName="width" values="0;0;535.6;535.6;0" keyTimes="0;0.1780;0.1860;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="175" class="terminal-text" clip-path="url(#clip-line-6)">      uint256id){returnpatie                                     nts[id];  </text>
+    <rect class="cursor" x="68.2" y="163" width="8" height="15">
+      <animate attributeName="x" values="68.2;68.2;550.6;550.6" keyTimes="0;0.1780;0.1860;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1780;0.1785;0.1855;0.1860;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-7">
+      <rect x="25" y="178" width="0" height="20">
+        <animate attributeName="width" values="0;0;542.8;542.8;0" keyTimes="0;0.1860;0.1940;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="190" class="terminal-text" clip-path="url(#clip-line-7)">     }};voidsetup()                           {pin             Mode(EOD_RO </text>
+    <rect class="cursor" x="61.0" y="178" width="8" height="15">
+      <animate attributeName="x" values="61.0;61.0;557.8;557.8" keyTimes="0;0.1860;0.1940;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1860;0.1865;0.1935;0.1940;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-8">
+      <rect x="25" y="193" width="0" height="20">
+        <animate attributeName="width" values="0;0;528.4;528.4;0" keyTimes="0;0.1940;0.2020;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="205" class="terminal-text" clip-path="url(#clip-line-8)">   VER_PIN,OUTP                             UT);Seri al.begin(9600);pinM   </text>
+    <rect class="cursor" x="46.6" y="193" width="8" height="15">
+      <animate attributeName="x" values="46.6;46.6;543.4;543.4" keyTimes="0;0.1940;0.2020;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1940;0.1945;0.2015;0.2020;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-9">
+      <rect x="25" y="208" width="0" height="20">
+        <animate attributeName="width" values="0;0;499.6;499.6;0" keyTimes="0;0.2020;0.2100;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="220" class="terminal-text" clip-path="url(#clip-line-9)">  ode(FARMING_R OVER_PIN,OUTPUT         );}voidloop(){if(detectObs t       </text>
+    <rect class="cursor" x="39.4" y="208" width="8" height="15">
+      <animate attributeName="x" values="39.4;39.4;514.6;514.6" keyTimes="0;0.2020;0.2100;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2020;0.2025;0.2095;0.2100;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-10">
+      <rect x="25" y="223" width="0" height="20">
+        <animate attributeName="width" values="0;0;478.0;478.0;0" keyTimes="0;0.2100;0.2180;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="235" class="terminal-text" clip-path="url(#clip-line-10)">  acle()){stopRover();delay(100);moveBackward();turnRight();}   }          </text>
+    <rect class="cursor" x="39.4" y="223" width="8" height="15">
+      <animate attributeName="x" values="39.4;39.4;493.0;493.0" keyTimes="0;0.2100;0.2180;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2100;0.2105;0.2175;0.2180;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-11">
+      <rect x="25" y="238" width="0" height="20">
+        <animate attributeName="width" values="0;0;406.0;406.0;0" keyTimes="0;0.2180;0.2260;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="250" class="terminal-text" clip-path="url(#clip-line-11)"> template<typenameT>voidbubbleSort(vector<T>&arr){for (                    </text>
+    <rect class="cursor" x="32.2" y="238" width="8" height="15">
+      <animate attributeName="x" values="32.2;32.2;421.0;421.0" keyTimes="0;0.2180;0.2260;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2180;0.2185;0.2255;0.2260;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-12">
+      <rect x="25" y="253" width="0" height="20">
+        <animate attributeName="width" values="0;0;362.8;362.8;0" keyTimes="0;0.2260;0.2340;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="265" class="terminal-text" clip-path="url(#clip-line-12)">  size_ti=0;i<arr.size();i++){for(size_tj=0;j<  a                          </text>
+    <rect class="cursor" x="39.4" y="253" width="8" height="15">
+      <animate attributeName="x" values="39.4;39.4;377.8;377.8" keyTimes="0;0.2260;0.2340;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2260;0.2265;0.2335;0.2340;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-13">
+      <rect x="25" y="268" width="0" height="20">
+        <animate attributeName="width" values="0;0;398.8;398.8;0" keyTimes="0;0.2340;0.2420;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="280" class="terminal-text" clip-path="url(#clip-line-13)">  rr.size()-i-1;j++){if(arr[j]>arr[j+1]){swap(arr[j],a                     </text>
+    <rect class="cursor" x="39.4" y="268" width="8" height="15">
+      <animate attributeName="x" values="39.4;39.4;413.8;413.8" keyTimes="0;0.2340;0.2420;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2340;0.2345;0.2415;0.2420;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-14">
+      <rect x="25" y="283" width="0" height="20">
+        <animate attributeName="width" values="0;0;456.4;456.4;0" keyTimes="0;0.2420;0.2500;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="295" class="terminal-text" clip-path="url(#clip-line-14)">   rr[j+1]);}}}}constFarmingRover=()=>{const[soilMoisture,s  e             </text>
+    <rect class="cursor" x="46.6" y="283" width="8" height="15">
+      <animate attributeName="x" values="46.6;46.6;471.4;471.4" keyTimes="0;0.2420;0.2500;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2420;0.2425;0.2495;0.2500;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-15">
+      <rect x="25" y="298" width="0" height="20">
+        <animate attributeName="width" values="0;0;521.2;521.2;0" keyTimes="0;0.2500;0.2580;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="310" class="terminal-text" clip-path="url(#clip-line-15)">    tMoisture]=useState(0);return<MoistureGaugevalue={soilMoist u r  e}    </text>
+    <rect class="cursor" x="53.8" y="298" width="8" height="15">
+      <animate attributeName="x" values="53.8;53.8;536.2;536.2" keyTimes="0;0.2500;0.2580;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2500;0.2505;0.2575;0.2580;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-16">
+      <rect x="25" y="313" width="0" height="20">
+        <animate attributeName="width" values="0;0;535.6;535.6;0" keyTimes="0;0.2580;0.2660;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="325" class="terminal-text" clip-path="url(#clip-line-16)">    />;};import*asTHREEfrom'three';constscene=newTHREE.Scene();constcamer  </text>
+    <rect class="cursor" x="53.8" y="313" width="8" height="15">
+      <animate attributeName="x" values="53.8;53.8;550.6;550.6" keyTimes="0;0.2580;0.2660;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2580;0.2585;0.2655;0.2660;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-17">
+      <rect x="25" y="328" width="0" height="20">
+        <animate attributeName="width" values="0;0;406.0;406.0;0" keyTimes="0;0.2660;0.2740;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="340" class="terminal-text" clip-path="url(#clip-line-17)">  a=newTHRE E.PerspectiveCamera(75,w/h,   0.1,1000);SEL                    </text>
+    <rect class="cursor" x="39.4" y="328" width="8" height="15">
+      <animate attributeName="x" values="39.4;39.4;421.0;421.0" keyTimes="0;0.2660;0.2740;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2660;0.2665;0.2735;0.2740;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-18">
+      <rect x="25" y="343" width="0" height="20">
+        <animate attributeName="width" values="0;0;290.8;290.8;0" keyTimes="0;0.2740;0.2820;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="355" class="terminal-text" clip-path="url(#clip-line-18)">  ECTpatie       nt_id,record_hashFROMh                                    </text>
+    <rect class="cursor" x="39.4" y="343" width="8" height="15">
+      <animate attributeName="x" values="39.4;39.4;305.8;305.8" keyTimes="0;0.2740;0.2820;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2740;0.2745;0.2815;0.2820;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-19">
+      <rect x="25" y="358" width="0" height="20">
+        <animate attributeName="width" values="0;0;334.0;334.0;0" keyTimes="0;0.2820;0.2900;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="370" class="terminal-text" clip-path="url(#clip-line-19)">   ealth_cha              in_db.recordsWHEREs                              </text>
+    <rect class="cursor" x="46.6" y="358" width="8" height="15">
+      <animate attributeName="x" values="46.6;46.6;349.0;349.0" keyTimes="0;0.2820;0.2900;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2820;0.2825;0.2895;0.2900;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <clipPath id="clip-line-20">
+      <rect x="25" y="373" width="0" height="20">
+        <animate attributeName="width" values="0;0;319.6;319.6;0" keyTimes="0;0.2900;0.2980;0.8500;1" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <text x="25" y="385" class="terminal-text" clip-path="url(#clip-line-20)">    ta tus=                  'active'ORDERB                                </text>
+    <rect class="cursor" x="53.8" y="373" width="8" height="15">
+      <animate attributeName="x" values="53.8;53.8;334.6;334.6" keyTimes="0;0.2900;0.2980;1" dur="10.0s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2900;0.2905;0.2975;0.2980;1" dur="10.0s" repeatCount="indefinite" />
+    </rect>
+    <!-- Bottom Command Prompt -->
+    <g>
+      <text x="25" y="430">
+        <animate attributeName="visibility" values="hidden;hidden;visible;visible;hidden" keyTimes="0;0.316;0.316;0.850;1" dur="10.0s" repeatCount="indefinite" />
+        <tspan class="prompt-user">jay@magar</tspan><tspan class="prompt-symbol">:~$ </tspan>
+      </text>
+      <rect class="cursor" x="125" y="418" width="8" height="15">
+        <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;0;0" keyTimes="0.0000;0.3150;0.3160;0.3410;0.3660;0.3910;0.4160;0.4410;0.4660;0.4910;0.5160;0.5410;0.5660;0.5910;0.6160;0.6410;0.6660;0.6910;0.7160;0.7410;0.7660;0.7910;0.8160;0.8410;0.8500;1.0000" dur="10.0s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+</svg>
