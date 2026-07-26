@@ -2,7 +2,7 @@
 
   <!-- Terminal Animation Showcase -->
 
-  ![Terminal Animation](./hello_terminal.svg?v=1.0.4-seamless-vector)
+  ![Terminal Animation](./hello_terminal.svg?v=2.0-raw-rects)
 
   <br /><br />
 
