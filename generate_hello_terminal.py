@@ -7,77 +7,78 @@ a big glowing block-text "HELLO" response.
 import os
 
 def generate_svg():
-    # Hello ASCII Art (38 characters wide per line) using ONLY solid blocks
-    hello_lines = [
-        "██  ██  ██████  ██      ██      ██████",
-        "██  ██  ██      ██      ██      ██  ██",
-        "██████  ████    ██      ██      ██  ██",
-        "██  ██  ██      ██      ██      ██  ██",
-        "██  ██  ██████  ██████  ██████  ██████"
-    ]
+    # Centered HELLO word as a single custom vector path (width=274, height=70)
+    # Stencil-like geometric cyber font
+    hello_path = (
+        "M 163,160 L 177,160 L 177,188 L 199,188 L 199,160 L 213,160 L 213,230 L 199,230 L 199,202 L 177,202 L 177,230 L 163,230 Z " # H
+        "M 225,160 L 267,160 L 267,174 L 239,174 L 239,188 L 260,188 L 260,202 L 239,202 L 239,216 L 267,216 L 267,230 L 225,230 Z " # E
+        "M 279,160 L 293,160 L 293,216 L 321,216 L 321,230 L 279,230 Z "                                                         # L
+        "M 333,160 L 347,160 L 347,216 L 375,216 L 375,230 L 333,230 Z "                                                         # L
+        "M 387,160 L 437,160 L 437,230 L 387,230 Z M 401,174 L 401,216 L 423,216 L 423,174 Z"                                     # O
+    )
 
     # Terminal size: 590x310 (leaves 15px margin in 620x340 viewport for drop shadow)
-    svg_content = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340" width="620" height="340">
+    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340" width="620" height="340">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
-      .terminal-window {
+      .terminal-window {{
         font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
         font-size: 12px;
         fill: #c9d1d9;
-      }
-      .window-bg {
+      }}
+      .window-bg {{
         fill: #0d1117;
         stroke: #30363d;
         stroke-width: 1.5;
         rx: 10px;
         ry: 10px;
-      }
-      .header-bg {
+      }}
+      .header-bg {{
         fill: #161b22;
         stroke: #30363d;
         stroke-width: 1.5;
         rx: 10px;
         ry: 10px;
-      }
-      .dot {
+      }}
+      .dot {{
         stroke-width: 0;
-      }
-      .terminal-title {
+      }}
+      .terminal-title {{
         fill: #8b949e;
         font-size: 11px;
         font-weight: 700;
         text-anchor: middle;
-      }
-      .prompt-user {
+      }}
+      .prompt-user {{
         fill: #58a6ff;
         font-weight: bold;
-      }
-      .prompt-symbol {
+      }}
+      .prompt-symbol {{
         fill: #c9d1d9;
-      }
-      .prompt-cmd {
+      }}
+      .prompt-cmd {{
         fill: #f0883e;
         font-weight: bold;
-      }
-      .status-text {
+      }}
+      .status-text {{
         fill: #8b949e;
-      }
-      .status-ok {
+      }}
+      .status-ok {{
         fill: #58a6ff;
         font-weight: bold;
-      }
-      .status-ready {
+      }}
+      .status-ready {{
         fill: #00ff87;
         font-weight: bold;
         filter: url(#glow);
-      }
-      .cursor {
+      }}
+      .cursor {{
         fill: #00ff87;
-      }
+      }}
     </style>
     
-    <!-- Glow filter for hacker aesthetic (used for fallback renderers) -->
+    <!-- Glow filter for hacker aesthetic -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="1.5" result="blur" />
       <feMerge>
@@ -97,15 +98,14 @@ def generate_svg():
     <!-- Whole terminal fades out at 8.5s and fades in at 9.0s to restart loop -->
     <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.85;0.90;0.98;1" dur="10.0s" repeatCount="indefinite" />
     
-    <!-- Vector Drop Shadow (Soft dark rect offset by +6px to avoid sanitizer stripping) -->
+    <!-- Vector Drop Shadow -->
     <rect x="21" y="21" width="590" height="310" fill="#010409" opacity="0.6" rx="10" ry="10" />
     
     <!-- Window Body -->
     <rect class="window-bg" x="15" y="15" width="590" height="310" />
     
-    <!-- Header Bar (Top Rounded) -->
+    <!-- Header Bar -->
     <rect class="header-bg" x="15" y="15" width="590" height="35" />
-    <!-- Cover bottom corners of header to make them flat -->
     <rect x="15.75" y="35" width="588.5" height="15" fill="#161b22" />
     
     <!-- Window Controls -->
@@ -162,67 +162,23 @@ def generate_svg():
       <text x="40" y="135" class="status-text" clip-path="url(#clip-status-3)">[+] Loading kernel interface... <tspan class="status-ready">[READY]</tspan></text>
     </g>
 
-    <!-- Big HELLO Block Text Section (Centered at x=173, width=273.6) -->
-"""
-
-    # Add the 5 lines of HELLO ASCII art as solid vector rectangles
-    def get_segments(line_str):
-        segments = []
-        in_block = False
-        start = 0
-        for char_idx, char in enumerate(line_str):
-            if char == '█' and not in_block:
-                in_block = True
-                start = char_idx
-            elif char != '█' and in_block:
-                in_block = False
-                segments.append((start, char_idx - start))
-        if in_block:
-            segments.append((start, len(line_str) - start))
-        return segments
-
-    y_start = 175
-    y_gap = 20
-    for idx, line in enumerate(hello_lines):
-        line_num = idx + 1
-        y_pos = y_start + (idx * y_gap)
-        
-        # Start and end times for each line typing
-        t_start = 0.17 + (idx * 0.02)
-        t_end = t_start + 0.02
-        
-        # Format times for SMIL keyTimes
-        kt_width = f"0;{t_start:.4f};{t_end:.4f};0.8500;1"
-        kt_cursor = f"0;{t_start:.4f};{t_end:.4f};1"
-        kt_opacity = f"0;{t_start:.4f};{t_start+0.0001:.4f};{t_end-0.0001:.4f};{t_end:.4f};1"
-        
-        rects_html = ""
-        for start, length in get_segments(line):
-            x_coord = 173 + start * 7.2
-            width = length * 7.2
-            rects_html += f'<rect x="{x_coord:.2f}" y="{y_pos - 12}" width="{width:.2f}" height="15" fill="url(#text-grad)" filter="url(#glow)" />'
-        
-        svg_content += f"""
-    <!-- HELLO Line {line_num} -->
+    <!-- Big HELLO Block Text Section (Revealed smoothly from left to right) -->
     <g>
-      <clipPath id="clip-hello-{line_num}">
-        <rect x="173" y="{y_pos - 12}" width="0" height="20">
-          <animate attributeName="width" values="0;0;274;274;0" keyTimes="{kt_width}" dur="10.0s" repeatCount="indefinite" />
+      <clipPath id="clip-hello">
+        <rect x="163" y="150" width="0" height="90">
+          <animate attributeName="width" values="0;0;274;274;0" keyTimes="0;0.1700;0.2700;0.8500;1" dur="10.0s" repeatCount="indefinite" />
         </rect>
       </clipPath>
-      <g clip-path="url(#clip-hello-{line_num})">
-        {rects_html}
-      </g>
       
-      <!-- Slide cursor for Line {line_num} -->
-      <rect class="cursor" x="173" y="{y_pos - 12}" width="8" height="15">
-        <animate attributeName="x" values="173;173;447;447" keyTimes="{kt_cursor}" dur="10.0s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{kt_opacity}" dur="10.0s" repeatCount="indefinite" />
+      <!-- Continuous vector path for the HELLO characters -->
+      <path d="{hello_path}" fill="url(#text-grad)" filter="url(#glow)" clip-path="url(#clip-hello)" />
+      
+      <!-- Scanning/revealing cursor line -->
+      <rect class="cursor" x="163" y="160" width="8" height="70">
+        <animate attributeName="x" values="163;163;437;437" keyTimes="0;0.1700;0.2700;1" dur="10.0s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.1700;0.1701;0.2699;0.2700;1" dur="10.0s" repeatCount="indefinite" />
       </rect>
-    </g>"""
-
-    # Add final command prompt and blinking cursor at the bottom (Y = 295)
-    svg_content += """
+    </g>
 
     <!-- Bottom Command Prompt -->
     <g>
