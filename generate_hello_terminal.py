@@ -213,7 +213,7 @@ def generate_svg():
 </svg>
 """
 
-    output_path = "hello_terminal.svg"
+    output_path = "hello_terminal_animated.svg"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"Generated figlet ANSI Shadow HELLO: {os.path.abspath(output_path)}")
