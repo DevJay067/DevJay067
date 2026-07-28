@@ -69,208 +69,200 @@
 
     <!-- ===== HELLO FIGLET LETTERS (raw rects, ANSI Shadow style) ===== -->
         <clipPath id="ch0">
-      <rect x="12" y="155" width="0" height="14">
-        <animate attributeName="width" values="0;0;595;595;0;0" keyTimes="0;0.17;0.19;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="155" width="0" height="14">
+        <animate attributeName="width" values="0;0;415;415;0;0" keyTimes="0;0.17;0.19;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="ch1">
-      <rect x="12" y="169" width="0" height="14">
-        <animate attributeName="width" values="0;0;595;595;0;0" keyTimes="0;0.19;0.21;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="169" width="0" height="14">
+        <animate attributeName="width" values="0;0;415;415;0;0" keyTimes="0;0.19;0.21;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="ch2">
-      <rect x="12" y="183" width="0" height="14">
-        <animate attributeName="width" values="0;0;595;595;0;0" keyTimes="0;0.21;0.23;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="183" width="0" height="14">
+        <animate attributeName="width" values="0;0;415;415;0;0" keyTimes="0;0.21;0.23;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="ch3">
-      <rect x="12" y="197" width="0" height="14">
-        <animate attributeName="width" values="0;0;595;595;0;0" keyTimes="0;0.23;0.25;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="197" width="0" height="14">
+        <animate attributeName="width" values="0;0;415;415;0;0" keyTimes="0;0.23;0.25;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="ch4">
-      <rect x="12" y="211" width="0" height="14">
-        <animate attributeName="width" values="0;0;595;595;0;0" keyTimes="0;0.25;0.27;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="211" width="0" height="14">
+        <animate attributeName="width" values="0;0;415;415;0;0" keyTimes="0;0.25;0.27;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <clipPath id="ch5">
-      <rect x="12" y="225" width="0" height="14">
-        <animate attributeName="width" values="0;0;595;595;0;0" keyTimes="0;0.27;0.29;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="225" width="0" height="14">
+        <animate attributeName="width" values="0;0;415;415;0;0" keyTimes="0;0.27;0.29;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </clipPath>
     <g>
     <g clip-path="url(#ch0)">
-        <rect x="17" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="26" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="35" y="155" width="9" height="14" fill="#005c32" />
-        <rect x="62" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="71" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="80" y="155" width="9" height="14" fill="#005c32" />
-        <rect x="89" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="98" y="155" width="9" height="14" fill="#00ff87" />
         <rect x="107" y="155" width="9" height="14" fill="#00ff87" />
         <rect x="116" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="125" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="134" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="143" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="152" y="155" width="9" height="14" fill="#005c32" />
-        <rect x="170" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="179" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="188" y="155" width="9" height="14" fill="#005c32" />
-        <rect x="305" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="314" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="323" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="125" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="152" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="161" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="170" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="188" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="197" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="206" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="215" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="224" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="233" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="242" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="251" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="269" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="278" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="287" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="350" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="359" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="368" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="440" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="449" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="458" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="467" y="155" width="9" height="14" fill="#00ff87" />
+        <rect x="476" y="155" width="9" height="14" fill="#00ff87" />
         <rect x="485" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="494" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="503" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="512" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="521" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="530" y="155" width="9" height="14" fill="#00ff87" />
-        <rect x="539" y="155" width="9" height="14" fill="#005c32" />
+        <rect x="494" y="155" width="9" height="14" fill="#005c32" />
     </g>
     <g clip-path="url(#ch1)">
-        <rect x="17" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="26" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="35" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="62" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="71" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="80" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="89" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="98" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="107" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="116" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="107" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="116" y="169" width="9" height="14" fill="#00ff87" />
         <rect x="125" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="134" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="143" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="152" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="170" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="179" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="188" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="305" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="314" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="323" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="467" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="476" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="485" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="494" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="152" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="161" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="170" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="188" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="197" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="206" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="215" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="224" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="233" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="242" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="251" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="269" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="278" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="287" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="350" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="359" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="368" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="431" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="440" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="449" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="458" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="467" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="476" y="169" width="9" height="14" fill="#005c32" />
+        <rect x="485" y="169" width="9" height="14" fill="#00ff87" />
+        <rect x="494" y="169" width="9" height="14" fill="#00ff87" />
         <rect x="503" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="512" y="169" width="9" height="14" fill="#005c32" />
-        <rect x="521" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="530" y="169" width="9" height="14" fill="#00ff87" />
-        <rect x="539" y="169" width="9" height="14" fill="#005c32" />
     </g>
     <g clip-path="url(#ch2)">
-        <rect x="17" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="26" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="35" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="44" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="53" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="62" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="71" y="183" width="9" height="14" fill="#005c32" />
-        <rect x="80" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="89" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="98" y="183" width="9" height="14" fill="#00ff87" />
         <rect x="107" y="183" width="9" height="14" fill="#00ff87" />
         <rect x="116" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="125" y="183" width="9" height="14" fill="#005c32" />
+        <rect x="125" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="134" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="143" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="152" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="161" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="170" y="183" width="9" height="14" fill="#005c32" />
         <rect x="188" y="183" width="9" height="14" fill="#00ff87" />
         <rect x="197" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="206" y="183" width="9" height="14" fill="#005c32" />
-        <rect x="323" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="332" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="341" y="183" width="9" height="14" fill="#005c32" />
+        <rect x="206" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="215" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="224" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="233" y="183" width="9" height="14" fill="#005c32" />
+        <rect x="269" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="278" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="287" y="183" width="9" height="14" fill="#005c32" />
+        <rect x="350" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="359" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="368" y="183" width="9" height="14" fill="#005c32" />
+        <rect x="431" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="440" y="183" width="9" height="14" fill="#00ff87" />
+        <rect x="449" y="183" width="9" height="14" fill="#005c32" />
         <rect x="485" y="183" width="9" height="14" fill="#00ff87" />
         <rect x="494" y="183" width="9" height="14" fill="#00ff87" />
         <rect x="503" y="183" width="9" height="14" fill="#005c32" />
-        <rect x="575" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="584" y="183" width="9" height="14" fill="#00ff87" />
-        <rect x="593" y="183" width="9" height="14" fill="#005c32" />
     </g>
     <g clip-path="url(#ch3)">
-        <rect x="17" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="26" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="35" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="44" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="53" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="62" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="71" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="80" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="89" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="98" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="107" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="116" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="107" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="116" y="197" width="9" height="14" fill="#00ff87" />
         <rect x="125" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="134" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="143" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="152" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="161" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="170" y="197" width="9" height="14" fill="#005c32" />
         <rect x="188" y="197" width="9" height="14" fill="#00ff87" />
         <rect x="197" y="197" width="9" height="14" fill="#00ff87" />
         <rect x="206" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="323" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="332" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="341" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="215" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="224" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="233" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="269" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="278" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="287" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="350" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="359" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="368" y="197" width="9" height="14" fill="#005c32" />
+        <rect x="431" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="440" y="197" width="9" height="14" fill="#00ff87" />
+        <rect x="449" y="197" width="9" height="14" fill="#005c32" />
         <rect x="485" y="197" width="9" height="14" fill="#00ff87" />
         <rect x="494" y="197" width="9" height="14" fill="#00ff87" />
         <rect x="503" y="197" width="9" height="14" fill="#005c32" />
-        <rect x="575" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="584" y="197" width="9" height="14" fill="#00ff87" />
-        <rect x="593" y="197" width="9" height="14" fill="#005c32" />
     </g>
     <g clip-path="url(#ch4)">
-        <rect x="17" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="26" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="35" y="211" width="9" height="14" fill="#005c32" />
-        <rect x="71" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="80" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="89" y="211" width="9" height="14" fill="#005c32" />
-        <rect x="98" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="107" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="116" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="125" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="134" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="143" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="125" y="211" width="9" height="14" fill="#005c32" />
         <rect x="152" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="161" y="211" width="9" height="14" fill="#005c32" />
-        <rect x="170" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="179" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="161" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="170" y="211" width="9" height="14" fill="#005c32" />
         <rect x="188" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="197" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="206" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="215" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="224" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="233" y="211" width="9" height="14" fill="#005c32" />
+        <rect x="233" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="242" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="251" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="260" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="251" y="211" width="9" height="14" fill="#005c32" />
         <rect x="269" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="278" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="287" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="296" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="305" y="211" width="9" height="14" fill="#005c32" />
-        <rect x="323" y="211" width="9" height="14" fill="#005c32" />
-        <rect x="332" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="341" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="305" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="314" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="323" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="332" y="211" width="9" height="14" fill="#005c32" />
         <rect x="350" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="359" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="368" y="211" width="9" height="14" fill="#00ff87" />
         <rect x="377" y="211" width="9" height="14" fill="#00ff87" />
-        <rect x="386" y="211" width="9" height="14" fill="#005c32" />
-        <rect x="395" y="211" width="9" height="14" fill="#005c32" />
+        <rect x="386" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="395" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="404" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="413" y="211" width="9" height="14" fill="#005c32" />
+        <rect x="431" y="211" width="9" height="14" fill="#005c32" />
+        <rect x="440" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="449" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="458" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="467" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="476" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="485" y="211" width="9" height="14" fill="#00ff87" />
+        <rect x="494" y="211" width="9" height="14" fill="#005c32" />
+        <rect x="503" y="211" width="9" height="14" fill="#005c32" />
     </g>
     <g clip-path="url(#ch5)">
-        <rect x="17" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="26" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="35" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="62" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="71" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="80" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="98" y="225" width="9" height="14" fill="#005c32" />
         <rect x="107" y="225" width="9" height="14" fill="#005c32" />
         <rect x="116" y="225" width="9" height="14" fill="#005c32" />
         <rect x="125" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="134" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="143" y="225" width="9" height="14" fill="#005c32" />
         <rect x="152" y="225" width="9" height="14" fill="#005c32" />
         <rect x="161" y="225" width="9" height="14" fill="#005c32" />
         <rect x="170" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="179" y="225" width="9" height="14" fill="#005c32" />
         <rect x="188" y="225" width="9" height="14" fill="#005c32" />
         <rect x="197" y="225" width="9" height="14" fill="#005c32" />
         <rect x="206" y="225" width="9" height="14" fill="#005c32" />
@@ -279,23 +271,33 @@
         <rect x="233" y="225" width="9" height="14" fill="#005c32" />
         <rect x="242" y="225" width="9" height="14" fill="#005c32" />
         <rect x="251" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="260" y="225" width="9" height="14" fill="#005c32" />
         <rect x="269" y="225" width="9" height="14" fill="#005c32" />
         <rect x="278" y="225" width="9" height="14" fill="#005c32" />
         <rect x="287" y="225" width="9" height="14" fill="#005c32" />
         <rect x="296" y="225" width="9" height="14" fill="#005c32" />
         <rect x="305" y="225" width="9" height="14" fill="#005c32" />
-        <rect x="341" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="314" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="323" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="332" y="225" width="9" height="14" fill="#005c32" />
         <rect x="350" y="225" width="9" height="14" fill="#005c32" />
         <rect x="359" y="225" width="9" height="14" fill="#005c32" />
         <rect x="368" y="225" width="9" height="14" fill="#005c32" />
         <rect x="377" y="225" width="9" height="14" fill="#005c32" />
         <rect x="386" y="225" width="9" height="14" fill="#005c32" />
         <rect x="395" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="404" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="413" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="440" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="449" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="458" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="467" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="476" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="485" y="225" width="9" height="14" fill="#005c32" />
+        <rect x="494" y="225" width="9" height="14" fill="#005c32" />
     </g>
       <!-- Scanning cursor beam -->
-      <rect x="12" y="155" width="8" height="14" fill="#00ff87" opacity="0">
-        <animate attributeName="x" values="12;12;607;12;607;12;607;12;607;12;607;12;607;12;12;12" keyTimes="0;0.17;0.19;0.1901;0.21;0.2101;0.23;0.2301;0.25;0.2501;0.27;0.2701;0.29;0.2901;0.85;1" dur="10s" repeatCount="indefinite" />
+      <rect x="102" y="155" width="8" height="14" fill="#00ff87" opacity="0">
+        <animate attributeName="x" values="102;102;517;102;517;102;517;102;517;102;517;102;517;102;102;102" keyTimes="0;0.17;0.19;0.1901;0.21;0.2101;0.23;0.2301;0.25;0.2501;0.27;0.2701;0.29;0.2901;0.85;1" dur="10s" repeatCount="indefinite" />
         <animate attributeName="y" values="155;155;155;169;169;183;183;197;197;211;211;225;225;155;155;155" keyTimes="0;0.17;0.19;0.1901;0.21;0.2101;0.23;0.2301;0.25;0.2501;0.27;0.2701;0.29;0.2901;0.85;1" dur="10s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0;0;0.8;0.8;0;0;0;0" keyTimes="0;0.17;0.1701;0.29;0.2901;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
