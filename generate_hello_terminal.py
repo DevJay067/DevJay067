@@ -19,74 +19,44 @@ def generate_svg():
     # ██║  ██║███████╗███████╗███████╗╚██████╔╝
     # ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝
 
-    H = [
-        [1,1,2,0,0,1,1,2],
-        [1,1,2,0,0,1,1,2],
-        [1,1,1,1,1,1,1,2],
-        [1,1,2,2,2,1,1,2],
-        [1,1,2,0,0,1,1,2],
-        [2,2,2,0,0,2,2,2],
+    ascii_art = [
+        "██╗  ██╗███████╗ ██╗            ██╗                 ██████╗ ",
+        "██║  ██║██╔════╝ ██║            ██║               ██╔═══██╗",
+        "██████║█████╗      ██║            ██║               ██║       ██║",
+        "██╔═██║██╔══╝      ██║            ██║               ██║       ██║",
+        "██║   ██║███████╗███████╗███████╗ ╚██████╔╝",
+        "╚═╝  ╚═╝ ╚══════╝╚══════╝╚══════╝   ╚═════╝"
     ]
-
-    E = [
-        [1,1,1,1,1,1,1,2],
-        [1,1,2,2,2,2,2,2],
-        [1,1,1,1,1,2,0,0],
-        [1,1,2,2,2,2,0,0],
-        [1,1,1,1,1,1,1,2],
-        [2,2,2,2,2,2,2,2],
-    ]
-
-    L = [
-        [1,1,2,0,0,0,0,0],
-        [1,1,2,0,0,0,0,0],
-        [1,1,2,0,0,0,0,0],
-        [1,1,2,0,0,0,0,0],
-        [1,1,1,1,1,1,1,2],
-        [2,2,2,2,2,2,2,2],
-    ]
-
-    O = [
-        [0,1,1,1,1,1,1,2,0],
-        [1,1,2,2,2,2,1,1,2],
-        [1,1,2,0,0,0,1,1,2],
-        [1,1,2,0,0,0,1,1,2],
-        [2,1,1,1,1,1,1,2,2],
-        [0,2,2,2,2,2,2,2,0],
-    ]
-
-    word = [('H', H), ('E', E), ('L', L), ('L', L), ('O', O)]
 
     # Cell dimensions
-    CW = 11   # cell width in px
+    CW = 9    # cell width in px
     CH = 14   # cell height in px
-    GAP = 1   # gap between letters in cells
 
     # Colors
     MAIN = "#00ff87"    # bright green
     SHADOW = "#005c32"  # dark green depth
 
     # Calculate total width to center in viewport
-    total_cells = sum(len(grid[0]) for _, grid in word) + GAP * (len(word) - 1)
-    total_w = total_cells * CW
+    max_len = max(len(line) for line in ascii_art)
+    total_w = max_len * CW
     x_start = 15 + (590 - total_w) // 2
     y_start = 155
 
     # Build rect elements grouped by row
     rects_by_row = {i: [] for i in range(6)}
-    cx = x_start
-    for _, grid in word:
-        for row_i, row in enumerate(grid):
-            for col_i, val in enumerate(row):
-                if val == 0:
-                    continue
-                x = cx + col_i * CW
-                y = y_start + row_i * CH
-                color = MAIN if val == 1 else SHADOW
-                rects_by_row[row_i].append(
-                    f'        <rect x="{x}" y="{y}" width="{CW}" height="{CH}" fill="{color}" />'
-                )
-        cx += (len(grid[0]) + GAP) * CW
+    for row_i, line in enumerate(ascii_art):
+        for col_i, char in enumerate(line):
+            if char == ' ':
+                continue
+            x = x_start + col_i * CW
+            y = y_start + row_i * CH
+            if char == '█':
+                color = MAIN
+            else:
+                color = SHADOW
+            rects_by_row[row_i].append(
+                f'        <rect x="{x}" y="{y}" width="{CW}" height="{CH}" fill="{color}" />'
+            )
 
     # Total HELLO block dimensions for clip-path
     hello_w = total_w + 10
