@@ -13,8 +13,6 @@
   </defs>
 
   <g class="tw">
-    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.85;0.90;0.98;1" dur="10s" repeatCount="indefinite" />
-
     <!-- Shadow -->
     <rect x="21" y="21" width="590" height="310" rx="10" ry="10" fill="#010409" opacity="0.5" />
 
@@ -35,20 +33,20 @@
     <g>
       <text x="40" y="75"><tspan class="pu">jay@magar</tspan><tspan class="ps">:~$ </tspan></text>
       <clipPath id="c0"><rect x="140" y="63" width="0" height="20">
-        <animate attributeName="width" values="0;0;101;101;0" keyTimes="0;0.02;0.08;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0;0;101;101;0;0" keyTimes="0;0.02;0.08;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect></clipPath>
       <text x="140" y="75" class="pc" clip-path="url(#c0)">./say_hello.sh</text>
       <!-- Typing cursor -->
       <rect x="140" y="63" width="8" height="15" fill="#00ff87">
-        <animate attributeName="x" values="140;140;241;241;140;140" keyTimes="0;0.02;0.08;0.085;0.85;1" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="1;0;1;0;1;1;0;0" keyTimes="0;0.005;0.01;0.015;0.02;0.085;0.086;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="x" values="140;140;241;241;140;140" keyTimes="0;0.02;0.08;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;0;1;0;1;1;0;0;0;0" keyTimes="0;0.005;0.01;0.015;0.02;0.085;0.086;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </g>
 
     <!-- Status line 1 -->
     <g>
       <clipPath id="c1"><rect x="40" y="83" width="0" height="20">
-        <animate attributeName="width" values="0;0;280;280;0" keyTimes="0;0.09;0.11;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0;0;280;280;0;0" keyTimes="0;0.09;0.11;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect></clipPath>
       <text x="40" y="95" class="st" clip-path="url(#c1)">[+] Decrypting cyber uplink... <tspan class="sok">[OK]</tspan></text>
     </g>
@@ -56,7 +54,7 @@
     <!-- Status line 2 -->
     <g>
       <clipPath id="c2"><rect x="40" y="103" width="0" height="20">
-        <animate attributeName="width" values="0;0;320;320;0" keyTimes="0;0.11;0.13;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0;0;320;320;0;0" keyTimes="0;0.11;0.13;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect></clipPath>
       <text x="40" y="115" class="st" clip-path="url(#c2)">[+] Establishing secure handshake... <tspan class="sok">[OK]</tspan></text>
     </g>
@@ -64,60 +62,50 @@
     <!-- Status line 3 -->
     <g>
       <clipPath id="c3"><rect x="40" y="123" width="0" height="20">
-        <animate attributeName="width" values="0;0;300;300;0" keyTimes="0;0.13;0.15;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="width" values="0;0;300;300;0;0" keyTimes="0;0.13;0.15;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect></clipPath>
       <text x="40" y="135" class="st" clip-path="url(#c3)">[+] Loading kernel interface... <tspan class="srd">[READY]</tspan></text>
     </g>
 
     <!-- ===== HELLO FIGLET LETTERS (raw rects, ANSI Shadow style) ===== -->
+        <clipPath id="ch0">
+      <rect x="57" y="155" width="0" height="14">
+        <animate attributeName="width" values="0;0;505;505;0;0" keyTimes="0;0.17;0.19;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="ch1">
+      <rect x="57" y="169" width="0" height="14">
+        <animate attributeName="width" values="0;0;505;505;0;0" keyTimes="0;0.19;0.21;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="ch2">
+      <rect x="57" y="183" width="0" height="14">
+        <animate attributeName="width" values="0;0;505;505;0;0" keyTimes="0;0.21;0.23;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="ch3">
+      <rect x="57" y="197" width="0" height="14">
+        <animate attributeName="width" values="0;0;505;505;0;0" keyTimes="0;0.23;0.25;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="ch4">
+      <rect x="57" y="211" width="0" height="14">
+        <animate attributeName="width" values="0;0;505;505;0;0" keyTimes="0;0.25;0.27;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+    <clipPath id="ch5">
+      <rect x="57" y="225" width="0" height="14">
+        <animate attributeName="width" values="0;0;505;505;0;0" keyTimes="0;0.27;0.29;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
     <g>
-      <!-- Clip-path for left-to-right scan reveal -->
-      <clipPath id="ch">
-        <rect x="57" y="150" width="0" height="94">
-          <animate attributeName="width" values="0;0;505;505;0" keyTimes="0;0.17;0.30;0.85;1" dur="10s" repeatCount="indefinite" />
-        </rect>
-      </clipPath>
-      <g clip-path="url(#ch)">
+    <g clip-path="url(#ch0)">
         <rect x="62" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="73" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="84" y="155" width="11" height="14" fill="#005c32" />
         <rect x="117" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="128" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="139" y="155" width="11" height="14" fill="#005c32" />
-        <rect x="62" y="169" width="11" height="14" fill="#00ff87" />
-        <rect x="73" y="169" width="11" height="14" fill="#00ff87" />
-        <rect x="84" y="169" width="11" height="14" fill="#005c32" />
-        <rect x="117" y="169" width="11" height="14" fill="#00ff87" />
-        <rect x="128" y="169" width="11" height="14" fill="#00ff87" />
-        <rect x="139" y="169" width="11" height="14" fill="#005c32" />
-        <rect x="62" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="73" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="84" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="95" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="106" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="117" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="128" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="139" y="183" width="11" height="14" fill="#005c32" />
-        <rect x="62" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="73" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="84" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="95" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="106" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="117" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="128" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="139" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="62" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="73" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="84" y="211" width="11" height="14" fill="#005c32" />
-        <rect x="117" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="128" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="139" y="211" width="11" height="14" fill="#005c32" />
-        <rect x="62" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="73" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="84" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="117" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="128" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="139" y="225" width="11" height="14" fill="#005c32" />
         <rect x="161" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="172" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="183" y="155" width="11" height="14" fill="#00ff87" />
@@ -126,6 +114,27 @@
         <rect x="216" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="227" y="155" width="11" height="14" fill="#00ff87" />
         <rect x="238" y="155" width="11" height="14" fill="#005c32" />
+        <rect x="260" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="271" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="282" y="155" width="11" height="14" fill="#005c32" />
+        <rect x="359" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="370" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="381" y="155" width="11" height="14" fill="#005c32" />
+        <rect x="469" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="480" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="491" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="502" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="513" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="524" y="155" width="11" height="14" fill="#00ff87" />
+        <rect x="535" y="155" width="11" height="14" fill="#005c32" />
+    </g>
+    <g clip-path="url(#ch1)">
+        <rect x="62" y="169" width="11" height="14" fill="#00ff87" />
+        <rect x="73" y="169" width="11" height="14" fill="#00ff87" />
+        <rect x="84" y="169" width="11" height="14" fill="#005c32" />
+        <rect x="117" y="169" width="11" height="14" fill="#00ff87" />
+        <rect x="128" y="169" width="11" height="14" fill="#00ff87" />
+        <rect x="139" y="169" width="11" height="14" fill="#005c32" />
         <rect x="161" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="172" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="183" y="169" width="11" height="14" fill="#005c32" />
@@ -134,97 +143,12 @@
         <rect x="216" y="169" width="11" height="14" fill="#005c32" />
         <rect x="227" y="169" width="11" height="14" fill="#005c32" />
         <rect x="238" y="169" width="11" height="14" fill="#005c32" />
-        <rect x="161" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="172" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="183" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="194" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="205" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="216" y="183" width="11" height="14" fill="#005c32" />
-        <rect x="161" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="172" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="183" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="194" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="205" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="216" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="161" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="172" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="183" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="194" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="205" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="216" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="227" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="238" y="211" width="11" height="14" fill="#005c32" />
-        <rect x="161" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="172" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="183" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="194" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="205" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="216" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="227" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="238" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="260" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="271" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="282" y="155" width="11" height="14" fill="#005c32" />
         <rect x="260" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="271" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="282" y="169" width="11" height="14" fill="#005c32" />
-        <rect x="260" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="271" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="282" y="183" width="11" height="14" fill="#005c32" />
-        <rect x="260" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="271" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="282" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="260" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="271" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="282" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="293" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="304" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="315" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="326" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="337" y="211" width="11" height="14" fill="#005c32" />
-        <rect x="260" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="271" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="282" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="293" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="304" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="315" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="326" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="337" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="359" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="370" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="381" y="155" width="11" height="14" fill="#005c32" />
         <rect x="359" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="370" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="381" y="169" width="11" height="14" fill="#005c32" />
-        <rect x="359" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="370" y="183" width="11" height="14" fill="#00ff87" />
-        <rect x="381" y="183" width="11" height="14" fill="#005c32" />
-        <rect x="359" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="370" y="197" width="11" height="14" fill="#00ff87" />
-        <rect x="381" y="197" width="11" height="14" fill="#005c32" />
-        <rect x="359" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="370" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="381" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="392" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="403" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="414" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="425" y="211" width="11" height="14" fill="#00ff87" />
-        <rect x="436" y="211" width="11" height="14" fill="#005c32" />
-        <rect x="359" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="370" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="381" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="392" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="403" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="414" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="425" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="436" y="225" width="11" height="14" fill="#005c32" />
-        <rect x="469" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="480" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="491" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="502" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="513" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="524" y="155" width="11" height="14" fill="#00ff87" />
-        <rect x="535" y="155" width="11" height="14" fill="#005c32" />
         <rect x="458" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="469" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="480" y="169" width="11" height="14" fill="#005c32" />
@@ -234,18 +158,94 @@
         <rect x="524" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="535" y="169" width="11" height="14" fill="#00ff87" />
         <rect x="546" y="169" width="11" height="14" fill="#005c32" />
+    </g>
+    <g clip-path="url(#ch2)">
+        <rect x="62" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="73" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="84" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="95" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="106" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="117" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="128" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="139" y="183" width="11" height="14" fill="#005c32" />
+        <rect x="161" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="172" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="183" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="194" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="205" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="216" y="183" width="11" height="14" fill="#005c32" />
+        <rect x="260" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="271" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="282" y="183" width="11" height="14" fill="#005c32" />
+        <rect x="359" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="370" y="183" width="11" height="14" fill="#00ff87" />
+        <rect x="381" y="183" width="11" height="14" fill="#005c32" />
         <rect x="458" y="183" width="11" height="14" fill="#00ff87" />
         <rect x="469" y="183" width="11" height="14" fill="#00ff87" />
         <rect x="480" y="183" width="11" height="14" fill="#005c32" />
         <rect x="524" y="183" width="11" height="14" fill="#00ff87" />
         <rect x="535" y="183" width="11" height="14" fill="#00ff87" />
         <rect x="546" y="183" width="11" height="14" fill="#005c32" />
+    </g>
+    <g clip-path="url(#ch3)">
+        <rect x="62" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="73" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="84" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="95" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="106" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="117" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="128" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="139" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="161" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="172" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="183" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="194" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="205" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="216" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="260" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="271" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="282" y="197" width="11" height="14" fill="#005c32" />
+        <rect x="359" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="370" y="197" width="11" height="14" fill="#00ff87" />
+        <rect x="381" y="197" width="11" height="14" fill="#005c32" />
         <rect x="458" y="197" width="11" height="14" fill="#00ff87" />
         <rect x="469" y="197" width="11" height="14" fill="#00ff87" />
         <rect x="480" y="197" width="11" height="14" fill="#005c32" />
         <rect x="524" y="197" width="11" height="14" fill="#00ff87" />
         <rect x="535" y="197" width="11" height="14" fill="#00ff87" />
         <rect x="546" y="197" width="11" height="14" fill="#005c32" />
+    </g>
+    <g clip-path="url(#ch4)">
+        <rect x="62" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="73" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="84" y="211" width="11" height="14" fill="#005c32" />
+        <rect x="117" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="128" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="139" y="211" width="11" height="14" fill="#005c32" />
+        <rect x="161" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="172" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="183" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="194" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="205" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="216" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="227" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="238" y="211" width="11" height="14" fill="#005c32" />
+        <rect x="260" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="271" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="282" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="293" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="304" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="315" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="326" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="337" y="211" width="11" height="14" fill="#005c32" />
+        <rect x="359" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="370" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="381" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="392" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="403" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="414" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="425" y="211" width="11" height="14" fill="#00ff87" />
+        <rect x="436" y="211" width="11" height="14" fill="#005c32" />
         <rect x="458" y="211" width="11" height="14" fill="#005c32" />
         <rect x="469" y="211" width="11" height="14" fill="#00ff87" />
         <rect x="480" y="211" width="11" height="14" fill="#00ff87" />
@@ -255,6 +255,38 @@
         <rect x="524" y="211" width="11" height="14" fill="#00ff87" />
         <rect x="535" y="211" width="11" height="14" fill="#005c32" />
         <rect x="546" y="211" width="11" height="14" fill="#005c32" />
+    </g>
+    <g clip-path="url(#ch5)">
+        <rect x="62" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="73" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="84" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="117" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="128" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="139" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="161" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="172" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="183" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="194" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="205" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="216" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="227" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="238" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="260" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="271" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="282" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="293" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="304" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="315" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="326" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="337" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="359" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="370" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="381" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="392" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="403" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="414" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="425" y="225" width="11" height="14" fill="#005c32" />
+        <rect x="436" y="225" width="11" height="14" fill="#005c32" />
         <rect x="469" y="225" width="11" height="14" fill="#005c32" />
         <rect x="480" y="225" width="11" height="14" fill="#005c32" />
         <rect x="491" y="225" width="11" height="14" fill="#005c32" />
@@ -262,23 +294,24 @@
         <rect x="513" y="225" width="11" height="14" fill="#005c32" />
         <rect x="524" y="225" width="11" height="14" fill="#005c32" />
         <rect x="535" y="225" width="11" height="14" fill="#005c32" />
-      </g>
+    </g>
       <!-- Scanning cursor beam -->
-      <rect x="57" y="155" width="3" height="84" fill="#00ff87" opacity="0.7">
-        <animate attributeName="x" values="57;57;562;562" keyTimes="0;0.17;0.30;1" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0;0;0.7;0.7;0;0" keyTimes="0;0.17;0.171;0.299;0.30;1" dur="10s" repeatCount="indefinite" />
+      <rect x="57" y="155" width="8" height="14" fill="#00ff87" opacity="0">
+        <animate attributeName="x" values="57;57;562;57;562;57;562;57;562;57;562;57;562;57;57;57" keyTimes="0;0.17;0.19;0.1901;0.21;0.2101;0.23;0.2301;0.25;0.2501;0.27;0.2701;0.29;0.2901;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="y" values="155;155;155;169;169;183;183;197;197;211;211;225;225;155;155;155" keyTimes="0;0.17;0.19;0.1901;0.21;0.2101;0.23;0.2301;0.25;0.2501;0.27;0.2701;0.29;0.2901;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0;0;0.8;0.8;0;0;0;0" keyTimes="0;0.17;0.1701;0.29;0.2901;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
       </rect>
     </g>
 
     <!-- Bottom prompt with blinking cursor -->
     <g>
       <text x="40" y="295">
-        <animate attributeName="visibility" values="hidden;hidden;visible;visible;hidden" keyTimes="0;0.33;0.33;0.85;1" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="visibility" values="hidden;hidden;visible;visible;hidden;hidden" keyTimes="0;0.33;0.33;0.85;0.8501;1" dur="10s" repeatCount="indefinite" />
         <tspan class="pu">jay@magar</tspan><tspan class="ps">:~$ </tspan>
       </text>
       <rect x="140" y="283" width="8" height="15" fill="#00ff87">
-        <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;0;0"
-                 keyTimes="0;0.329;0.33;0.36;0.39;0.42;0.45;0.48;0.51;0.54;0.57;0.60;0.63;0.66;0.69;0.72;0.75;0.78;0.81;0.84;0.845;0.846;0.85;1"
+        <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;1;0;0;0;0"
+                 keyTimes="0;0.329;0.33;0.36;0.39;0.42;0.45;0.48;0.51;0.54;0.57;0.60;0.63;0.66;0.69;0.72;0.75;0.78;0.81;0.84;0.845;0.846;0.85;0.8501;1"
                  dur="10s" repeatCount="indefinite" />
       </rect>
     </g>
